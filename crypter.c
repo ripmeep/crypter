@@ -2,31 +2,31 @@
 #include <crypter.h>
 
 int main(int argc, char **argv) {
-	if (argc < 3)
-	{
-		printf("Usage: %s [PAYLOAD FILE] [OUTPUT EXE]\n", argv[0]);
+    if (argc < 3)
+    {
+        printf("Usage: %s [PAYLOAD FILE] [OUTPUT EXE]\n", argv[0]);
 
-		return -1;
-	}
+        return -1;
+    }
 
-	char *payload_file = argv[1];
-	char *crypto_exe = argv[2];
+    char *payload_file = argv[1];
+    char *crypter_exe = argv[2];
 
-	CryptoPackageCtx ctx;
-	CryptoPackageInit(&ctx, payload_file);
-	CryptoPackageInvoke(&ctx, crypto_exe);
+    CrypterPackageCtx ctx;
+    CrypterPackageInit(&ctx, payload_file);
+    CrypterPackageInvoke(&ctx, crypter_exe);
 
-	char source[strlen(crypto_exe) + 3];
+    char source[strlen(crypter_exe) + 3];
 
-	snprintf(source, sizeof(source), "%s.c", crypto_exe);
+    snprintf(source, sizeof(source), "%s.c", crypter_exe);
 
-	char command[strlen(source) * 2 + 256];
+    char command[strlen(source) * 2 + 256];
 
-	snprintf(command, sizeof(command), "x86_64-w64-mingw32-gcc %s -o %s -fno-stack-protector", source, crypto_exe);
+    snprintf(command, sizeof(command), "x86_64-w64-mingw32-gcc %s -o %s -fno-stack-protector", sou$
 
-	printf("Now run: %s\n", command);
+    printf("Now run: %s\n", command);
 
-	printf("Finished\n");
+    printf("Finished\n");
 
-	return 0;
+    return 0;
 }
