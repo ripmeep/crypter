@@ -4,7 +4,7 @@ A shellcode crypto-packing tool for PoC (used with msfvenom/binary payloads)
 This tool is for proof of concept only - please use responsibly.
 
 Crypter is an auxiliary tool used for crypto packing msfvenom Windows payloads.
-It uses AES256 to encrypt the payload and create C source from it from which you can compile (on linux or windows) into an executable.
+It uses AES128 (optimal for speed) to encrypt the payload and create C source from it from which you can compile (on linux or windows) into an executable.
 
 You will need to install `MinGW` on Linux in order to compile `.exe` files:
 
