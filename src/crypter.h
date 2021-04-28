@@ -113,7 +113,7 @@ unsigned char *CrypterPackageInvoke(CrypterPackageCtx *ctx, const char *outfile)
     }
 
 //  #if DEBUG
-        printf("Generated random AES256 Cryto Pack key: ");
+        printf("Generated random AES128 Cryto Pack key: ");
 
         for (int i = 0; i < CRYPTER_BLOCK_LENGTH_BYTES; ++i)
         {
