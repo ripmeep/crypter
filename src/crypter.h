@@ -1,4 +1,3 @@
-
 /* DEFINITIONS */
 #ifndef CRYPTER_H
 #define CRYPTER_H
