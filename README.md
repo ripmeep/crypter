@@ -58,4 +58,4 @@ Finished
 ```
 
 It will then display the MinGW command you need to run to compile the source file.
-`x86_64-w64-mingw32-gcc shell.exe.c -o shell.exe -fno-stack-protector` (my case).
+`x86_64-w64-mingw32-gcc shell.exe.c -o shell.exe -fno-stack-protector -s` (my case).
