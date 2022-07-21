@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
 
     char command[strlen(source) * 2 + 256];
 
-    snprintf(command, sizeof(command), "x86_64-w64-mingw32-gcc %s -o %s -fno-stack-protector", source, crypter_exe);
+    snprintf(command, sizeof(command), "x86_64-w64-mingw32-gcc %s -o %s -fno-stack-protector -s", source, crypter_exe);
 
     printf("Now run: %s\n", command);
 
