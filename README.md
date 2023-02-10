@@ -53,7 +53,7 @@ Successfully encrypted payload - generating exe file
 Generated Crypto C source
 Writing source to shell.exe.c...
 Done
-Now run: x86_64-w64-mingw32-gcc shell.exe.c -o shell.exe -fno-stack-protector
+Now run: x86_64-w64-mingw32-gcc shell.exe.c -o shell.exe -fno-stack-protector -s
 Finished
 ```
 
